@@ -1,4 +1,4 @@
-## Story link: 
+### Story link: 
 
 ## :pencil2: Description
 
