@@ -4,8 +4,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
 @SpringBootApplication
-class PocketPharmacyApiApplication
+class Application
 
 fun main(args: Array<String>) {
-    runApplication<PocketPharmacyApiApplication>(*args)
+    runApplication<Application>(*args)
 }
