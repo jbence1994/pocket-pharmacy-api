@@ -24,6 +24,8 @@
 
         <!-- Project dependency versions -->
         <org.springdoc.version>1.6.7</org.springdoc.version>
+        <spring-boot.version>2.6.6</spring-boot.version>
+        <mysql-connector-java.version>8.0.28</mysql-connector-java.version>
 
         <!-- Maven plugin versions -->
         <jacoco.version>0.8.2</jacoco.version>
@@ -54,6 +56,16 @@
             <groupId>org.springdoc</groupId>
             <artifactId>springdoc-openapi-ui</artifactId>
             <version>${org.springdoc.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+            <version>${spring-boot.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>${mysql-connector-java.version}</version>
         </dependency>
     </dependencies>
 
