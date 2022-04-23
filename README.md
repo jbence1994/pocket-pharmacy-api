@@ -34,3 +34,5 @@ mvn clean package
 
 java -jar target/pocket-pharmacy-api-0.0.1-SNAPSHOT.jar
 ```
+
+4. To view endpoints, open [SwaggerUI](http://localhost:8080/swagger-ui.html) in your browser.

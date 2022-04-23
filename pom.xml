@@ -22,6 +22,9 @@
         <java.version>11</java.version>
         <kotlin.version>1.6.21</kotlin.version>
 
+        <!-- Project dependency versions -->
+        <org.springdoc.version>1.6.7</org.springdoc.version>
+
         <!-- Maven plugin versions -->
         <jacoco.version>0.8.2</jacoco.version>
 
@@ -46,6 +49,11 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springdoc</groupId>
+            <artifactId>springdoc-openapi-ui</artifactId>
+            <version>${org.springdoc.version}</version>
         </dependency>
     </dependencies>
 
