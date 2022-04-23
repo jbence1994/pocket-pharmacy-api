@@ -13,16 +13,18 @@ To avoid any unexpected behaviour, make sure you have installed the following to
 
 ## Running project locally
 
-1. To install third-party dependencies, make sure you run:
+1. Before start, make sure to provide your local database's credentials in `database-secrets.yml`.
+
+2. To install third-party dependencies, to create database schema and populate it with test data locally, make sure you run:
 
 ```bash
-mvn clean install
+mvn clean install -Dspring.profiles.active=dev
 ```
 
-2. Run with Spring Boot Maven plugin:
+3. Run with Spring Boot Maven plugin:
 
 ```bash
-mvn spring-boot:run
+mvn spring-boot:run -Dspring-boot.run.profiles=dev
 ```
 
 OR
@@ -32,7 +34,7 @@ OR
 ```bash
 mvn clean package
 
-java -jar target/pocket-pharmacy-api-0.0.1-SNAPSHOT.jar
+java -jar -Dspring.profiles.active=dev target/pocket-pharmacy-api-0.0.1-SNAPSHOT.jar
 ```
 
 4. To view endpoints, open [SwaggerUI](http://localhost:8080/swagger-ui.html) in your browser.
