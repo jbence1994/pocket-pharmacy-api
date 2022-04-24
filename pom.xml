@@ -129,6 +129,7 @@
                     <execution>
                         <id>format-and-check</id>
                         <goals>
+                            <goal>format</goal>
                             <goal>check</goal>
                         </goals>
                     </execution>
