@@ -22,6 +22,9 @@
         <java.version>11</java.version>
         <kotlin.version>1.6.21</kotlin.version>
 
+        <!-- Detekt configuration -->
+        <detekt.config>${project.basedir}/detekt.yml</detekt.config>
+
         <!-- Project dependency versions -->
         <org.springdoc.version>1.6.7</org.springdoc.version>
         <spring-boot.version>2.6.6</spring-boot.version>
@@ -29,6 +32,7 @@
 
         <!-- Maven plugin versions -->
         <jacoco.version>0.8.2</jacoco.version>
+        <ktlint.version>1.6.1</ktlint.version>
 
         <!-- JaCoCo properties -->
         <jacoco.line-coverage-min-percentage>0.90</jacoco.line-coverage-min-percentage>
@@ -114,6 +118,20 @@
                                 </rule>
                             </rules>
                         </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>com.github.gantsign.maven</groupId>
+                <artifactId>ktlint-maven-plugin</artifactId>
+                <version>${ktlint.version}</version>
+                <executions>
+                    <execution>
+                        <id>format-and-check</id>
+                        <goals>
+                            <goal>format</goal>
+                            <goal>check</goal>
+                        </goals>
                     </execution>
                 </executions>
             </plugin>
