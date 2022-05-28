@@ -42,7 +42,7 @@ OR
 ```bash
 mvn clean package
 
-java -jar -Dspring.profiles.active=dev target/<jar-name>.jar
+java -jar -Dspring.profiles.active=dev target/[jar-name].jar
 ```
 
 4. To view endpoints, open [SwaggerUI](http://localhost:8080/swagger-ui.html) in your browser.
