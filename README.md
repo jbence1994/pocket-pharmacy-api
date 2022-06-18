@@ -36,7 +36,8 @@ jpa-connection:
   password: 
 ```
 
-Finally, provide your local database's credential property values next to the keys.\
+Finally, provide your local database's credential property values next to the keys.
+
 #### Note that: this configuration file is excluded from git tracking, so don't worry about to commit your database credentials :slightly_smiling_face:
 
 ### Start application
