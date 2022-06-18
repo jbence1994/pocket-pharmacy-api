@@ -4,6 +4,8 @@ Domestic medicine administration application's api.
 
 [![Build](https://github.com/jbence1994/pocket-pharmacy-api/actions/workflows/build.yml/badge.svg)](https://github.com/jbence1994/pocket-pharmacy-api/actions/workflows/build.yml)
 
+[Contribution](CONTRIBUTING.md)
+
 ## Prerequisites
 
 A) To avoid any unexpected behaviour, make sure you have installed the following tools:
@@ -42,7 +44,7 @@ OR
 ```bash
 mvn clean package
 
-java -jar -Dspring.profiles.active=dev target/[jar-name].jar
+java -jar -Dspring.profiles.active=dev target/<jar-name>.jar
 ```
 
 4. To view endpoints, open [SwaggerUI](http://localhost:8080/swagger-ui.html) in your browser.
