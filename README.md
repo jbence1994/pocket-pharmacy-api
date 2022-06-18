@@ -23,15 +23,32 @@ If you are working in a different IDE or text editor, don't worry: ktlint Maven 
 
 ## Running project locally
 
-1. Before start, make sure to provide your local database's credentials in `database-secrets.yml`.
+### Creating database secrets configuration file:
 
-2. To install third-party dependencies, to create database schema and populate it with test data locally, make sure you run:
+Before start, make sure to provide your local database's credentials. Create a file called `database-secrets.yml` in `src/main/resouces`, then put these configuration keys into that:
+
+```yaml
+jpa-connection:
+  host: 
+  port: 
+  database: 
+  username: 
+  password: 
+```
+
+Finally, provide your local database's credential property values next to the keys.
+
+#### Note that: this configuration file is excluded from git tracking, so don't worry about to commit your database credentials :slightly_smiling_face:
+
+### Start application
+
+1. To install third-party dependencies, to create database schema and populate it with test data locally, make sure you run:
 
 ```bash
 mvn clean install -Dspring.profiles.active=dev
 ```
 
-3. Run with Spring Boot Maven plugin:
+2. Run with Spring Boot Maven plugin:
 
 ```bash
 mvn spring-boot:run -Dspring-boot.run.profiles=dev
