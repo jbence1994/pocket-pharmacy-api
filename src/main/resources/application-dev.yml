@@ -2,11 +2,11 @@ spring:
   config:
     activate:
       on-profile: dev
-    import: database-secrets.yml
+    import: database-dev-secrets.yml
   datasource:
-    url: jdbc:mysql://${database.url}/pocket_pharmacy
-    username: ${database.username}
-    password: ${database.password}
+    url: jdbc:mysql://${jpa-connection.host}:${jpa-connection.port}/${jpa-connection.database}
+    username: ${jpa-connection.username}
+    password: ${jpa-connection.password}
     sql:
       init:
         mode: always
@@ -14,7 +14,7 @@ spring:
   jpa:
     generate-ddl: true
     hibernate:
-      ddl-auto: create
+      ddl-auto: none
     database-platform: org.hibernate.dialect.MySQL5Dialect
     properties:
       hibernate:
