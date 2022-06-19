@@ -20,6 +20,7 @@ class MedicineController {
         return ResponseEntity(listOf("{ id: 1, name: $XANAX }", "{ id: 2, name: $RUBOPHEN }"), HttpStatus.OK)
     }
 
+    @Suppress("MagicNumber")
     @GetMapping(ID)
     fun getMedicine(@PathVariable id: Int): ResponseEntity<String> {
         return if (id <= 0 || id >= 3) {
