@@ -28,12 +28,4 @@ data class Medicine(
     fun isExpired(): Boolean {
         return LocalDate.now() > expirationDate
     }
-
-    fun hasWeeklyDosage(): Boolean {
-        return false
-    }
-
-    fun getWeeklyDosage(): Int {
-        return 0
-    }
 }
