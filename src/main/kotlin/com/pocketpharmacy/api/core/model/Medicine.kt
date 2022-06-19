@@ -23,4 +23,17 @@ data class Medicine(
 
     @OneToOne
     val dosage: Dosage = Dosage()
-)
+) {
+
+    fun isExpired(): Boolean {
+        return LocalDate.now() > expirationDate
+    }
+
+    fun hasWeeklyDosage(): Boolean {
+        return false
+    }
+
+    fun getWeeklyDosage(): Int {
+        return 0
+    }
+}

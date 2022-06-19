@@ -35,7 +35,7 @@
         <ktlint.version>1.6.1</ktlint.version>
 
         <!-- JaCoCo properties -->
-        <jacoco.line-coverage-min-percentage>0.90</jacoco.line-coverage-min-percentage>
+        <jacoco.line-coverage-min-percentage>0.78</jacoco.line-coverage-min-percentage>
     </properties>
 
     <dependencies>
@@ -88,7 +88,6 @@
                 <version>${jacoco.version}</version>
                 <configuration>
                     <excludes>
-                        <exclude>com/pocketpharmacy/api/core/model/*</exclude>
                         <exclude>com/pocketpharmacy/api/Application*</exclude>
                     </excludes>
                 </configuration>
