@@ -22,11 +22,9 @@ class MedicineController {
 
     @GetMapping(ID)
     fun getMedicine(@PathVariable id: Int): ResponseEntity<String> {
-        if (id <= 0 || id >= 3) {
+        return if (id <= 0 || id >= 3) {
             return ResponseEntity("Medicine not found with id: $id", HttpStatus.NOT_FOUND)
-        }
-
-        return if (id == 1) {
+        } else if (id == 1) {
             ResponseEntity("{ id: $id, name: $XANAX }", HttpStatus.OK)
         } else {
             ResponseEntity("{ id: $id, name: $RUBOPHEN }", HttpStatus.OK)
