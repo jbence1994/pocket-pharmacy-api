@@ -19,7 +19,7 @@ data class Medicine(
     val unit: String = "",
     val expirationDate: LocalDate = LocalDate.of(0, 1, 1),
     val needPrescription: Boolean = false,
-    val quantity: Double = 0.0,
+    val quantity: Int = 0,
 
     @OneToOne
     val dosage: Dosage = Dosage()
