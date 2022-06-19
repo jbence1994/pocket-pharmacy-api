@@ -88,7 +88,6 @@
                 <version>${jacoco.version}</version>
                 <configuration>
                     <excludes>
-                        <exclude>com/pocketpharmacy/api/core/model/*</exclude>
                         <exclude>com/pocketpharmacy/api/Application*</exclude>
                     </excludes>
                 </configuration>
