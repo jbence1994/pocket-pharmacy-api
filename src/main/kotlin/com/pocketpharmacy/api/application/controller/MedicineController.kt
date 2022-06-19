@@ -2,7 +2,6 @@ package com.pocketpharmacy.api.application.controller
 
 import com.pocketpharmacy.api.application.constants.RouteConstants.ID
 import com.pocketpharmacy.api.application.constants.RouteConstants.MEDICINES
-import com.pocketpharmacy.api.application.resource.response.DosageResponse
 import com.pocketpharmacy.api.application.resource.response.MedicineResponse
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
@@ -22,11 +21,11 @@ class MedicineController {
         name = "Xanax",
         description = "Domestic painkiller.",
         amount = 20.0,
+        dailyDosageAmount = 1.5,
         unit = "mg",
         expirationDate = LocalDate.of(2023, 1, 1),
         needPrescription = false,
-        quantity = 20,
-        dosage = DosageResponse(1, 2, 1.5, "mg")
+        quantity = 20
     )
 
     @Suppress("MagicNumber")
@@ -35,11 +34,11 @@ class MedicineController {
         name = "Rubophen",
         description = "For high fever.",
         amount = 20.0,
+        dailyDosageAmount = 2.0,
         unit = "mg",
         expirationDate = LocalDate.of(2024, 1, 1),
         needPrescription = true,
-        quantity = 20,
-        dosage = DosageResponse(2, 1, 2.0, "mg")
+        quantity = 20
     )
 
     @GetMapping
