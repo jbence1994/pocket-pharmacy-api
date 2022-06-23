@@ -1,6 +1,5 @@
 package com.pocketpharmacy.api.testbuilders.core.model
 
-import com.pocketpharmacy.api.core.model.Dosage
 import com.pocketpharmacy.api.core.model.Medicine
 import java.time.LocalDate
 
@@ -17,12 +16,12 @@ class MedicineTestBuilder {
         name: String = "Xanax",
         description: String = "Domestic painkiller.",
         amount: Double = 20.0,
+        dailyDosageAmount: Double = 1.5,
         unit: String = "mg",
         expirationDate: LocalDate = LocalDate.of(2099, 1, 1),
         needPrescription: Boolean = false,
-        quantity: Int = 20,
-        dosage: Dosage = DosageTestBuilder.default
+        quantity: Int = 20
     ): Medicine {
-        return Medicine(id, name, description, amount, unit, expirationDate, needPrescription, quantity, dosage)
+        return Medicine(id, name, description, amount, dailyDosageAmount, unit, expirationDate, needPrescription, quantity)
     }
 }
