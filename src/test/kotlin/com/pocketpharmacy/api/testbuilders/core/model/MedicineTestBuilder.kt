@@ -10,7 +10,6 @@ class MedicineTestBuilder {
         val expired: Medicine = instance.build(expirationDate = LocalDate.of(2022, 1, 1))
     }
 
-    @Suppress("LongParameterList")
     private fun build(
         id: Int = 1,
         name: String = "Xanax",
