@@ -33,7 +33,7 @@
         <ktlint.version>1.6.1</ktlint.version>
 
         <!-- JaCoCo properties -->
-        <jacoco.line-coverage-min-percentage>0.92</jacoco.line-coverage-min-percentage>
+        <jacoco.line-coverage-min-percentage>0.85</jacoco.line-coverage-min-percentage>
     </properties>
 
     <dependencies>
