@@ -16,6 +16,4 @@ data class Medicine(
     val expirationDate: LocalDate = LocalDate.of(0, 1, 1),
     val needPrescription: Boolean = false,
     val quantity: Int = 0
-) {
-    fun isExpired(): Boolean = LocalDate.now() > expirationDate
-}
+)

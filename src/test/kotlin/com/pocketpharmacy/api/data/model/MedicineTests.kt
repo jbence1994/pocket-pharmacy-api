@@ -1,5 +1,6 @@
 package com.pocketpharmacy.api.data.model
 
+import com.pocketpharmacy.api.domain.util.isExpired
 import com.pocketpharmacy.api.testbuilders.data.model.MedicineTestBuilder
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.params.ParameterizedTest
