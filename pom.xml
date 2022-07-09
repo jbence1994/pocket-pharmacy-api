@@ -12,7 +12,7 @@
 
     <groupId>com.pocketpharmacy</groupId>
     <artifactId>pocket-pharmacy-api</artifactId>
-    <name>pocket-pharmacy-api</name>
+    <name>pocket-pharmacy</name>
     <description>Domestic medicine administration application's api.</description>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
@@ -26,21 +26,24 @@
         <detekt.config>${project.basedir}/detekt.yml</detekt.config>
 
         <!-- Project dependency versions -->
-        <org.springdoc.version>1.6.7</org.springdoc.version>
-        <mysql-connector-java.version>8.0.28</mysql-connector-java.version>
+        <springdoc-openapi-ui.version>1.6.9</springdoc-openapi-ui.version>
 
         <!-- Maven plugin versions -->
-        <jacoco.version>0.8.2</jacoco.version>
+        <jacoco.version>0.8.8</jacoco.version>
         <ktlint.version>1.6.1</ktlint.version>
 
         <!-- JaCoCo properties -->
-        <jacoco.line-coverage-min-percentage>0.90</jacoco.line-coverage-min-percentage>
+        <jacoco.line-coverage-min-percentage>0.85</jacoco.line-coverage-min-percentage>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-mongodb</artifactId>
         </dependency>
         <dependency>
             <groupId>org.jetbrains.kotlin</groupId>
@@ -58,16 +61,7 @@
         <dependency>
             <groupId>org.springdoc</groupId>
             <artifactId>springdoc-openapi-ui</artifactId>
-            <version>${org.springdoc.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-jpa</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <version>${mysql-connector-java.version}</version>
+            <version>${springdoc-openapi-ui.version}</version>
         </dependency>
         <dependency>
             <groupId>com.h2database</groupId>

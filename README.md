@@ -4,7 +4,7 @@ Domestic medicine administration application's api.
 
 [![Build](https://github.com/jbence1994/pocket-pharmacy-api/actions/workflows/build.yml/badge.svg)](https://github.com/jbence1994/pocket-pharmacy-api/actions/workflows/build.yml)
 
-[Contribution](CONTRIBUTING.md)
+[Contributing guide](.github/CONTRIBUTING.md)
 
 ## Prerequisites
 
@@ -23,32 +23,25 @@ If you are working in a different IDE or text editor, don't worry: ktlint Maven 
 
 ## Running project locally
 
-### Creating database secrets configuration file:
+### Creating database secrets configuration file
 
-Before start, make sure to provide your local database's credentials. Create a file called `database-secrets.yml` in `src/main/resouces`, then put these configuration keys into that:
+Before start, make sure you set up a MongoDB database locally on your machine, then perform these steps:
 
-```yaml
-jpa-connection:
-  host: 
-  port: 
-  database: 
-  username: 
-  password: 
+1. Install [v4.25.3](https://github.com/mikefarah/yq/releases/tag/v4.25.3) of [yq](https://github.com/mikefarah/yq) on your machine
+2. Generate `database-secrets.yml` configuration file with this [shell script](generate-database-secrets-file.sh)
+3. Finally, provide your local database's secrets in place of `null` values
+
+#### Note that: this configuration file is excluded from git tracking, so don't worry about committing your database secrets!
+
+### Compile source code
+
+```bash
+mvn clean install
 ```
-
-Finally, provide your local database's credential property values next to the keys.
-
-#### Note that: this configuration file is excluded from git tracking, so don't worry about committing your database credentials :slightly_smiling_face:
 
 ### Start application
 
-1. To install third-party dependencies, to create database schema and populate it with test data locally, make sure you run:
-
-```bash
-mvn clean install -Dspring.profiles.active=dev
-```
-
-2. Run with Spring Boot Maven plugin:
+1. Run with Spring Boot Maven plugin:
 
 ```bash
 mvn spring-boot:run -Dspring-boot.run.profiles=dev
@@ -56,7 +49,7 @@ mvn spring-boot:run -Dspring-boot.run.profiles=dev
 
 OR
 
-3. Run with packaging:
+1. Run with packaging:
 
 ```bash
 mvn clean package
@@ -64,4 +57,4 @@ mvn clean package
 java -jar -Dspring.profiles.active=dev target/<jar-name>.jar
 ```
 
-4. To view endpoints, open [SwaggerUI](http://localhost:8080/swagger-ui.html) in your browser.
+2. To view endpoints, open [SwaggerUI](http://localhost:8080/swagger-ui.html) in your browser.

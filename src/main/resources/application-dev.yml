@@ -3,20 +3,8 @@ spring:
     activate:
       on-profile: dev
     import: database-secrets.yml
-  datasource:
-    url: jdbc:mysql://${jpa-connection.host}:${jpa-connection.port}/${jpa-connection.database}
-    username: ${jpa-connection.username}
-    password: ${jpa-connection.password}
-    sql:
-      init:
-        mode: always
-    driver-class-name: com.mysql.cj.jdbc.Driver
-  jpa:
-    generate-ddl: true
-    hibernate:
-      ddl-auto: none
-    database-platform: org.hibernate.dialect.MySQL5Dialect
-    properties:
-      hibernate:
-        format_sql: true
-    open-in-view: off
+  data:
+    mongodb:
+      host: ${mongodb-connection.host}
+      port: ${mongodb-connection.port}
+      database: ${mongodb-connection.database}
