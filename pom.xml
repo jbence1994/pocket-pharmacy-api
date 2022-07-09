@@ -26,7 +26,7 @@
         <detekt.config>${project.basedir}/detekt.yml</detekt.config>
 
         <!-- Project dependency versions -->
-        <springdoc-openapi-ui.version>1.6.7</springdoc-openapi-ui.version>
+        <springdoc-openapi-ui.version>1.6.9</springdoc-openapi-ui.version>
 
         <!-- Maven plugin versions -->
         <jacoco.version>0.8.8</jacoco.version>
