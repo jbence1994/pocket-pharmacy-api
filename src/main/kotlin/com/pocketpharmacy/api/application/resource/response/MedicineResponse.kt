@@ -11,5 +11,5 @@ data class MedicineResponse(
     val unit: String = "",
     val expirationDate: LocalDate = LocalDate.of(0, 1, 1),
     val needPrescription: Boolean = false,
-    val quantity: Int = 0,
+    val quantity: Int = 0
 )
