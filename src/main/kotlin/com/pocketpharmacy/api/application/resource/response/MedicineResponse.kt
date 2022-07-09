@@ -3,7 +3,7 @@ package com.pocketpharmacy.api.application.resource.response
 import java.time.LocalDate
 
 data class MedicineResponse(
-    val id: Int = 0,
+    val id: String = "",
     val name: String = "",
     val description: String = "",
     val amount: Double = 0.0,
