@@ -1,6 +1,6 @@
-package com.pocketpharmacy.api.testbuilders.core.model
+package com.pocketpharmacy.api.testbuilders.data.model
 
-import com.pocketpharmacy.api.core.model.Medicine
+import com.pocketpharmacy.api.data.model.Medicine
 import java.time.LocalDate
 
 class MedicineTestBuilder {
@@ -11,7 +11,7 @@ class MedicineTestBuilder {
     }
 
     private fun build(
-        id: Int = 1,
+        id: String = "8a2b853a-c621-4289-913d-3bb950097e51",
         name: String = "Xanax",
         description: String = "Domestic painkiller.",
         amount: Double = 20.0,

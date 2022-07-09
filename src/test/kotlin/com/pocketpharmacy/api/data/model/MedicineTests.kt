@@ -1,6 +1,6 @@
-package com.pocketpharmacy.api.core.model
+package com.pocketpharmacy.api.data.model
 
-import com.pocketpharmacy.api.testbuilders.core.model.MedicineTestBuilder
+import com.pocketpharmacy.api.testbuilders.data.model.MedicineTestBuilder
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.params.ParameterizedTest
 import org.junit.jupiter.params.provider.Arguments
