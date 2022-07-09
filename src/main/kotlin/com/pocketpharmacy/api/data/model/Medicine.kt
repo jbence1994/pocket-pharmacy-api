@@ -4,10 +4,10 @@ import org.springframework.data.annotation.Id
 import org.springframework.data.mongodb.core.mapping.Document
 import java.time.LocalDate
 
-@Document
+@Document("medicines")
 data class Medicine(
     @Id
-    val id: String = "",
+    var id: String = "",
     val name: String = "",
     val description: String = "",
     val amount: Double = 0.0,
