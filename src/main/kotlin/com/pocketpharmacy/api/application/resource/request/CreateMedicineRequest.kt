@@ -3,7 +3,6 @@ package com.pocketpharmacy.api.application.resource.request
 import java.time.LocalDate
 
 data class CreateMedicineRequest(
-    val id: String = "",
     val name: String = "",
     val description: String = "",
     val amount: Double = 0.0,
