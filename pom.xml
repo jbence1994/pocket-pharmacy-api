@@ -81,6 +81,7 @@
                 <configuration>
                     <excludes>
                         <exclude>com/pocketpharmacy/api/application/controller/**</exclude>
+                        <exclude>com/pocketpharmacy/api/data/**</exclude>
                         <exclude>com/pocketpharmacy/api/Application*</exclude>
                     </excludes>
                 </configuration>
