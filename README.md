@@ -4,7 +4,7 @@ Domestic medicine administration application's api.
 
 [![Build](https://github.com/jbence1994/pocket-pharmacy-api/actions/workflows/build.yml/badge.svg)](https://github.com/jbence1994/pocket-pharmacy-api/actions/workflows/build.yml)
 
-[Contributing guide](CONTRIBUTING.md)
+[Contributing guide](.github/CONTRIBUTING.md)
 
 ## Prerequisites
 
