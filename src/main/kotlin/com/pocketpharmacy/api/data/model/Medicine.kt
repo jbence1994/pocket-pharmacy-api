@@ -1,10 +1,11 @@
 package com.pocketpharmacy.api.data.model
 
+import com.pocketpharmacy.api.data.constants.MongoDBConstants
 import org.springframework.data.annotation.Id
 import org.springframework.data.mongodb.core.mapping.Document
 import java.time.LocalDate
 
-@Document("medicines")
+@Document(MongoDBConstants.MEDICINES_DOCUMENT_NAME)
 data class Medicine(
     @Id
     var id: String = "",
