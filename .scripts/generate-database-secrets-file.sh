@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-cd ./src/main/resources
+cd ../src/main/resources || exit
 
 rm -rf ./database-secrets.yml
 

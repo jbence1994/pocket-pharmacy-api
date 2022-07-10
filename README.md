@@ -28,7 +28,7 @@ If you are working in a different IDE or text editor, don't worry: ktlint Maven 
 Before start, make sure you set up a MongoDB database locally on your machine, then perform these steps:
 
 1. Install [v4.25.3](https://github.com/mikefarah/yq/releases/tag/v4.25.3) of [yq](https://github.com/mikefarah/yq) on your machine
-2. Generate `database-secrets.yml` configuration file with this [shell script](generate-database-secrets-file.sh)
+2. Generate `database-secrets.yml` configuration file with this [shell script](.scripts/generate-database-secrets-file.sh)
 3. Finally, provide your local database's secrets in place of `null` values
 
 #### Note that: this configuration file is excluded from git tracking, so don't worry about committing your database secrets!
