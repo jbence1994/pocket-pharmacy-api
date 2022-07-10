@@ -17,7 +17,7 @@ B) If you are using IntelliJ IDEA, make sure you enable detekt plugin to see for
 
 1. Open File -> Settings -> Tools -> Detekt
 2. Select `Enable Detekt`, `Enable rules upon the default configuration` and `Enable formatting (ktlint) rules` options
-3. At `Configuration files` section, browse `detekt.yml` from the project's files
+3. At `Configuration files` section, browse `.config\detekt.yml` from the project's files
 
 If you are working in a different IDE or text editor, don't worry: ktlint Maven plugin will automatically format the code for you!
 
