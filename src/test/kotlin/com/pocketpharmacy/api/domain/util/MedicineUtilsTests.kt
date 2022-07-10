@@ -1,5 +1,6 @@
-package com.pocketpharmacy.api.data.model
+package com.pocketpharmacy.api.domain.util
 
+import com.pocketpharmacy.api.data.model.Medicine
 import com.pocketpharmacy.api.testbuilders.data.model.MedicineTestBuilder
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.params.ParameterizedTest
@@ -9,7 +10,7 @@ import org.springframework.boot.test.context.SpringBootTest
 import java.util.stream.Stream
 
 @SpringBootTest
-class MedicineTests {
+class MedicineUtilsTests {
 
     companion object {
         @JvmStatic

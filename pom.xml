@@ -26,6 +26,7 @@
         <detekt.config>${project.basedir}/detekt.yml</detekt.config>
 
         <!-- Project dependency versions -->
+        <mockk.version>1.12.0</mockk.version>
         <springdoc-openapi-ui.version>1.6.9</springdoc-openapi-ui.version>
 
         <!-- Maven plugin versions -->
@@ -33,7 +34,7 @@
         <ktlint.version>1.6.1</ktlint.version>
 
         <!-- JaCoCo properties -->
-        <jacoco.line-coverage-min-percentage>0.85</jacoco.line-coverage-min-percentage>
+        <jacoco.line-coverage-min-percentage>0.99</jacoco.line-coverage-min-percentage>
     </properties>
 
     <dependencies>
@@ -59,6 +60,11 @@
             <scope>test</scope>
         </dependency>
         <dependency>
+            <groupId>io.mockk</groupId>
+            <artifactId>mockk</artifactId>
+            <version>${mockk.version}</version>
+        </dependency>
+        <dependency>
             <groupId>org.springdoc</groupId>
             <artifactId>springdoc-openapi-ui</artifactId>
             <version>${springdoc-openapi-ui.version}</version>
@@ -80,6 +86,10 @@
                 <version>${jacoco.version}</version>
                 <configuration>
                     <excludes>
+                        <exclude>com/pocketpharmacy/api/application/controller/**</exclude>
+                        <exclude>com/pocketpharmacy/api/application/resource/request/**</exclude>
+                        <exclude>com/pocketpharmacy/api/application/resource/response/**</exclude>
+                        <exclude>com/pocketpharmacy/api/data/**</exclude>
                         <exclude>com/pocketpharmacy/api/Application*</exclude>
                     </excludes>
                 </configuration>

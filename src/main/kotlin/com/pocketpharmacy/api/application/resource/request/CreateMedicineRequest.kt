@@ -1,14 +1,8 @@
-package com.pocketpharmacy.api.data.model
+package com.pocketpharmacy.api.application.resource.request
 
-import com.pocketpharmacy.api.data.constants.MongoDBConstants
-import org.springframework.data.annotation.Id
-import org.springframework.data.mongodb.core.mapping.Document
 import java.time.LocalDate
 
-@Document(MongoDBConstants.MEDICINES_DOCUMENT_NAME)
-data class Medicine(
-    @Id
-    var id: String = "",
+data class CreateMedicineRequest(
     val name: String = "",
     val description: String = "",
     val amount: Double = 0.0,

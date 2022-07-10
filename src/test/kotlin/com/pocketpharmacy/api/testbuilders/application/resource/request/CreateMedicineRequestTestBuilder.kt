@@ -1,18 +1,15 @@
-package com.pocketpharmacy.api.testbuilders.data.model
+package com.pocketpharmacy.api.testbuilders.application.resource.request
 
-import com.pocketpharmacy.api.data.model.Medicine
+import com.pocketpharmacy.api.application.resource.request.CreateMedicineRequest
 import java.time.LocalDate
 
-class MedicineTestBuilder {
+class CreateMedicineRequestTestBuilder {
     companion object {
-        private val instance = MedicineTestBuilder()
-        val default: Medicine = instance.build()
-        val expired: Medicine = instance.build(expirationDate = LocalDate.of(2022, 1, 1))
-        val afterRequestMapping: Medicine = instance.build(id = "")
+        private val instance = CreateMedicineRequestTestBuilder()
+        val default: CreateMedicineRequest = instance.build()
     }
 
-    private fun build(
-        id: String = "8a2b853a-c621-4289-913d-3bb950097e51",
+    fun build(
         name: String = "Xanax",
         description: String = "Domestic painkiller.",
         amount: Double = 20.0,
@@ -21,9 +18,8 @@ class MedicineTestBuilder {
         expirationDate: LocalDate = LocalDate.of(2099, 1, 1),
         needPrescription: Boolean = false,
         quantity: Int = 20
-    ): Medicine {
-        return Medicine(
-            id,
+    ): CreateMedicineRequest {
+        return CreateMedicineRequest(
             name,
             description,
             amount,
