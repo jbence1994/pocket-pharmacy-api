@@ -6,6 +6,7 @@ import com.pocketpharmacy.api.application.resource.mapping.response.MedicineToMe
 import com.pocketpharmacy.api.application.resource.request.CreateMedicineRequest
 import com.pocketpharmacy.api.application.resource.response.MedicineResponse
 import com.pocketpharmacy.api.data.model.Medicine
+import com.pocketpharmacy.api.domain.exception.MedicineNotFoundException
 import com.pocketpharmacy.api.domain.service.MedicineService
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
@@ -30,8 +31,16 @@ class MedicineController(
     }
 
     @GetMapping(RouteConstants.ID)
-    fun getMedicine(@PathVariable id: Int): ResponseEntity<MedicineResponse> {
-        throw NotImplementedError("Operation not yet implemented.")
+    fun getMedicine(@PathVariable id: String): ResponseEntity<MedicineResponse> {
+        return try {
+            val medicine: Medicine = medicineService.getMedicine(id)
+            val medicineResponse: MedicineResponse = medicineToMedicineResponseMapper.map(medicine)
+            ResponseEntity(medicineResponse, HttpStatus.OK)
+        } catch (medicineNotFoundException: MedicineNotFoundException) {
+            ResponseEntity(HttpStatus.NOT_FOUND)
+        } catch (exception: Exception) {
+            ResponseEntity(HttpStatus.BAD_REQUEST)
+        }
     }
 
     @PostMapping
