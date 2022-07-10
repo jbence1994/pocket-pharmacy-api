@@ -10,6 +10,7 @@ class MedicineService(
     private val medicineRepository: MedicineRepository
 ) {
     fun addMedicine(medicine: Medicine): Medicine {
+        // TODO: later extract 'UUID.randomUUID().toString()' to separate component to be able to fake a static value
         medicine.id = UUID.randomUUID().toString()
         return medicineRepository.save(medicine)
     }
