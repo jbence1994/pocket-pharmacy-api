@@ -8,6 +8,7 @@ class MedicineTestBuilder {
         private val instance = MedicineTestBuilder()
         val default: Medicine = instance.build()
         val expired: Medicine = instance.build(expirationDate = LocalDate.of(2022, 1, 1))
+        val afterRequestMapping: Medicine = instance.build(id = "")
     }
 
     private fun build(
