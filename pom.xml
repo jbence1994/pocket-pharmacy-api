@@ -26,6 +26,7 @@
         <detekt.config>${project.basedir}/detekt.yml</detekt.config>
 
         <!-- Project dependency versions -->
+        <mockk.version>1.12.0</mockk.version>
         <springdoc-openapi-ui.version>1.6.9</springdoc-openapi-ui.version>
 
         <!-- Maven plugin versions -->
@@ -57,6 +58,11 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.mockk</groupId>
+            <artifactId>mockk</artifactId>
+            <version>${mockk.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springdoc</groupId>
