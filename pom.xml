@@ -30,7 +30,7 @@
 
         <!-- Maven plugin versions -->
         <jacoco.version>0.8.8</jacoco.version>
-        <ktlint.version>1.6.1</ktlint.version>
+        <ktlint.version>1.14.0</ktlint.version>
 
         <!-- JaCoCo properties -->
         <jacoco.line-coverage-min-percentage>0.85</jacoco.line-coverage-min-percentage>
